@@ -1,0 +1,38 @@
+***This txt file translate the 'result.xml' into plain text***
+
+myData:
+   country:
+      name:Brazil
+      inflation:23
+      government:federal republic
+      lapc:52329.41
+      gdp:976800
+   
+   country:
+      name:Mexico
+      inflation:52
+      government:federal republic operating under a centralized government
+      lapc:20596.21
+      gdp:721400
+   
+   country:
+      name:Pakistan
+      inflation:13
+      government:republic
+      lapc:6218.8
+      gdp:274200
+   
+   country:
+      name:India
+      inflation:9
+      government:federal republic
+      lapc:3452.96
+      gdp:1408700
+   
+   country:
+      name:Korea
+      inflation:4.3
+      government:republic
+      lapc:2165.24
+      gdp:590700
+   

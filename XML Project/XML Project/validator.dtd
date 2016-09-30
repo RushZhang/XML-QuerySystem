@@ -1,0 +1,7 @@
+<!ELEMENT myData (country)> 
+<!ELEMENT country (name,inflation,government,lapc,gdp)>
+<!ELEMENT name (#PCDATA)> 
+<!ELEMENT inflation (#PCDATA)> 
+<!ELEMENT government (#PCDATA)> 
+<!ELEMENT lapc (#PCDATA)> 
+<!ELEMENT gdp (#PCDATA)> 

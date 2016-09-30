@@ -1,0 +1,53 @@
+declare namespace functx = "http://www.functx.com";
+
+
+declare function local:land_area_per_capita_number(
+  $total_area as xs:decimal?,
+  $population as xs:decimal?) as xs:decimal?
+{
+let $lapc := round-half-to-even($total_area * 1000000 div $population,2)
+return $lapc
+};
+
+
+declare function functx:trim( $arg as xs:string? )  as xs:string {
+   replace(replace($arg,'\s+$',''),'^\s+','')
+ } ;
+
+
+
+element myData{
+let $cities := doc("mondial.xml")//city
+
+let $target_city_id := (let $cities := doc("mondial.xml")//city
+
+    for $population in $cities/population
+    
+    let $city_name := data($population/../name[1])
+    
+    let $city_id := data($population/../@id)
+
+    order by xs:decimal($population) descending   
+
+    return ($city_id) )[position() = 1 to 5]
+
+for $c_id in $cities/@id
+
+for $target_id in $target_city_id
+
+let $numresult:=local:land_area_per_capita_number(data($c_id/ancestor::country/@total_area), 
+    data($c_id/ancestor::country/@population))
+    
+where $c_id=$target_id 
+
+order by $numresult descending
+
+return element country {( 
+       element name {functx:trim($c_id/ancestor::country/name[1])},
+       element inflation {string($c_id/ancestor::country/@inflation)},
+       element government {string($c_id/ancestor::country/@government)},
+       element lapc {string($numresult)}, 
+       element gdp {string($c_id/ancestor::country/@gdp_total)})}
+}
+
+

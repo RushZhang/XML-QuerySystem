@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<myData>
+   <country>
+      <name>Brazil</name>
+      <inflation>23</inflation>
+      <government>federal republic</government>
+      <lapc>52329.41</lapc>
+      <gdp>976800</gdp>
+   </country>
+   <country>
+      <name>Mexico</name>
+      <inflation>52</inflation>
+      <government>federal republic operating under a centralized government</government>
+      <lapc>20596.21</lapc>
+      <gdp>721400</gdp>
+   </country>
+   <country>
+      <name>Pakistan</name>
+      <inflation>13</inflation>
+      <government>republic</government>
+      <lapc>6218.8</lapc>
+      <gdp>274200</gdp>
+   </country>
+   <country>
+      <name>India</name>
+      <inflation>9</inflation>
+      <government>federal republic</government>
+      <lapc>3452.96</lapc>
+      <gdp>1408700</gdp>
+   </country>
+   <country>
+      <name>Korea</name>
+      <inflation>4.3</inflation>
+      <government>republic</government>
+      <lapc>2165.24</lapc>
+      <gdp>590700</gdp>
+   </country>
+</myData>
